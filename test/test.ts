@@ -9,6 +9,13 @@ describe("something", () => {
     expect(cell.isAlive).equal(false)
   })
 
+  it('one living cell dies with one neighbour', () => {
+    const alive = true
+    const cell = new Cell(alive)
+    cell.next(1)
+    expect(cell.isAlive).equal(false)
+  })
+
   it('makes a cell alive if it has three living neighbours', () => {
     const dead = false
     const cell = new Cell(dead)
@@ -24,10 +31,12 @@ describe("something", () => {
   })
 
     it('alive cell with 2 neighbours stay alive', () => {
-    const dead = false
-    const cell = new Cell(dead)
-    cell.next(0)
-    expect(cell.isAlive).is.false
+    const alive = true
+    const cell = new Cell(alive)
+    cell.next(2)
+    expect(cell.isAlive).is.true
   })
+
+
 
 });
