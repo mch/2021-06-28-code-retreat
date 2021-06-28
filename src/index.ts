@@ -1,3 +1,7 @@
 export function foo() {}
 
-export class Bar {}
+export class Cell {
+    next() {
+        
+    }
+}

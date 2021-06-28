@@ -1,7 +1,11 @@
 import { expect } from "chai";
+import { Cell } from '../src'
 
 describe("something", () => {
-  it("does something", () => {
-    expect(true).is.true;
-  });
+  it('one living cell dies', () => {
+    const alive = true
+    const cell = new Cell(alive)
+    cell.next()
+    expect(cell.isAlive).equal(false)
+  })
 });
