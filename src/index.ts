@@ -10,8 +10,10 @@ export class Cell {
     next(neighbor: number) {
         if (neighbor === 3) {
             this.isAlive = true;
-        } else if (neighbor === 0) {
+        } else if (neighbor === 0 || neighbor === 1) {
           this.isAlive = false;
+        } else {
+            this.isAlive = false
         }
     }
 }

@@ -30,13 +30,17 @@ describe("something", () => {
     expect(cell.isAlive).is.false
   })
 
-    it('alive cell with 2 neighbours stay alive', () => {
+  it('alive cell with 2 neighbours stay alive', () => {
     const alive = true
     const cell = new Cell(alive)
     cell.next(2)
     expect(cell.isAlive).is.true
   })
 
-
-
+  it('cell with more four or more neighbours will die by overpopulation', () => {
+    const alive = true
+    const cell = new Cell(alive)
+    cell.next(4)
+    expect(cell.isAlive).is.false
+  })
 });
