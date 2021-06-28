@@ -3,12 +3,12 @@ export function foo() {}
 export class Cell {
     isAlive: boolean = false;
 
-    constructor (state: {alive: boolean, neighbor: number}) {
+    constructor (state:  boolean) {
     }
 
     next(neighbor: number) {
         if (neighbor === 3) {
-            isAlive = true;
+            this.isAlive = true;
         }
     }
 }
