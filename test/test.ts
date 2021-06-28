@@ -8,4 +8,11 @@ describe("something", () => {
     cell.next()
     expect(cell.isAlive).equal(false)
   })
+
+  it('makes a cell alive if it has three living neighbours', () => {
+    const dead = false
+    const cell = new Cell(dead)
+    cell.next()
+    expect(cell.isAlive).is.true
+  })
 });
